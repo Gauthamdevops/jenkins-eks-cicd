@@ -52,7 +52,7 @@ pipeline {
                     sh '''
                     aws eks update-kubeconfig --name $CLUSTER_NAME --region $AWS_REGION
                     
-                    kubectl apply -f deployment.yml
+                    #kubectl apply -f deployment.yml
 
                     kubectl set image deployment/animated-web-deploy animated-web=$ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPO:$IMAGE_TAG
 

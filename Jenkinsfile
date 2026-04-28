@@ -61,6 +61,15 @@ pipeline {
                 }
             }
         }
+       
+        stage('Update Deployment File') {
+            steps {
+                steps {
+                   sh '''
+                   sed -i "s|image:.*|image: $ECR_REPO:$IMAGE_TAG|" k8s/deployment.yml
+                   '''
+           }
+        }
     }
     
     post {

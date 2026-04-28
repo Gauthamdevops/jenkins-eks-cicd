@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage ('Git Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Gauthamdevops/animated-website.git'
+                git branch: 'main', url: 'https://github.com/Gauthamdevops/jenkins-eks-cicd.git'
             }
         }
         
